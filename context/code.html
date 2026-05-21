@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flicker — A Deep-Sea Shoot 'Em Up by Butterware Studios</title>
+<meta content="One tiny snailfish. Five levels of real deep-sea bosses. Wishlist Flicker on Steam — a cute, creepy, challenging vertical shoot 'em up from Butterware Studios." name="description"/>
+<!-- Open Graph -->
+<meta content="Flicker — A Deep-Sea Shoot 'Em Up" property="og:title"/>
+<meta content="Pilot a tiny snailfish through 5 levels of real deep-sea horrors. Cute. Creepy. Challenging. Wishlist on Steam." property="og:description"/>
+<meta content="[PLACEHOLDER: /assets/og-image.png]" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="[PLACEHOLDER: https://flickergame.com]" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Flicker" property="og:site_name"/>
+<!-- Twitter / X card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Flicker — A Deep-Sea Shoot 'Em Up" name="twitter:title"/>
+<meta content="Pilot a tiny snailfish through 5 levels of real deep-sea horrors. Cute. Creepy. Challenging." name="twitter:description"/>
+<meta content="[PLACEHOLDER: /assets/og-image.png]" name="twitter:image"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Font preload -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "outline-variant": "#5a4047",
+                  "surface-tint": "#ffb1c8",
+                  "surface": "#0f1322",
+                  "on-error": "#690005",
+                  "primary": "#ffb1c8",
+                  "primary-fixed": "#ffd9e2",
+                  "bg-light": "#f5f4fb",
+                  "inverse-on-surface": "#2c3040",
+                  "bg-card": "#1e1e2e",
+                  "error-container": "#93000a",
+                  "inverse-surface": "#dfe1f7",
+                  "primary-container": "#d40072",
+                  "surface-container-lowest": "#0a0d1d",
+                  "on-tertiary-fixed-variant": "#4c3a84",
+                  "on-tertiary-fixed": "#1f0756",
+                  "surface-container-high": "#26293a",
+                  "tertiary-fixed": "#e8deff",
+                  "error": "#ffb4ab",
+                  "on-background": "#dfe1f7",
+                  "on-tertiary": "#35226c",
+                  "bg-deep": "#050817",
+                  "surface-container-highest": "#303445",
+                  "on-primary-container": "#ffebef",
+                  "text-primary": "#ffffff",
+                  "secondary": "#42e3ce",
+                  "surface-variant": "#303445",
+                  "outline": "#a98891",
+                  "secondary-fixed": "#60fae4",
+                  "on-primary-fixed-variant": "#8e004a",
+                  "on-surface": "#dfe1f7",
+                  "surface-container-low": "#171b2b",
+                  "on-primary": "#650033",
+                  "on-primary-fixed": "#3e001d",
+                  "tertiary-fixed-dim": "#cdbdff",
+                  "secondary-fixed-dim": "#39ddc8",
+                  "bg-mid": "#0a0f2c",
+                  "text-dark": "#0a0f2c",
+                  "on-secondary": "#003731",
+                  "on-secondary-fixed": "#00201c",
+                  "on-surface-variant": "#e2bdc6",
+                  "tertiary-container": "#7361ad",
+                  "surface-bright": "#353849",
+                  "background": "#0f1322",
+                  "text-muted": "rgba(255, 255, 255, 0.6)",
+                  "tertiary": "#cdbdff",
+                  "on-secondary-fixed-variant": "#005047",
+                  "on-secondary-container": "#004d44",
+                  "on-tertiary-container": "#f4edff",
+                  "secondary-container": "#00c6b2",
+                  "inverse-primary": "#b90063",
+                  "border-teal": "rgba(0, 200, 180, 0.2)",
+                  "primary-fixed-dim": "#ffb1c8",
+                  "surface-container": "#1b1f2f",
+                  "on-error-container": "#ffdad6",
+                  "surface-dim": "#0f1322"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "section-padding-v-mobile": "48px",
+                  "content-padding-h": "80px",
+                  "content-padding-h-mobile": "20px",
+                  "gutter-desktop": "24px",
+                  "section-padding-v": "80px",
+                  "gutter-mobile": "16px",
+                  "gap-cards": "40px",
+                  "gap-tiles": "10px"
+          },
+          "fontFamily": {
+                  "hero-h1": ["Inter"],
+                  "label-badge": ["Inter"],
+                  "hero-h1-mobile": ["Inter"],
+                  "section-h2-mobile": ["Inter"],
+                  "card-heading": ["Inter"],
+                  "body-sm": ["Inter"],
+                  "section-h2": ["Inter"],
+                  "scientific-name": ["Inter"],
+                  "body-lg": ["Inter"]
+          },
+          "fontSize": {
+                  "hero-h1": ["52px", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                  "label-badge": ["11px", { "lineHeight": "1", "letterSpacing": "2px", "fontWeight": "600" }],
+                  "hero-h1-mobile": ["36px", { "lineHeight": "1.15", "fontWeight": "700" }],
+                  "section-h2-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                  "card-heading": ["18px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                  "body-sm": ["14px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                  "section-h2": ["42px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                  "scientific-name": ["11px", { "lineHeight": "1.2", "fontWeight": "300" }],
+                  "body-lg": ["18px", { "lineHeight": "1.7", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom utility classes based on spec */
+    .bg-hero-gradient {
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 8, 23, 0.3) 0%,
+        rgba(5, 8, 23, 0.5) 40%,
+        rgba(5, 8, 23, 0.85) 75%,
+        rgba(5, 8, 23, 1.0) 100%
+      );
+    }
+    
+    .rendering-pixelated {
+      image-rendering: pixelated;
+    }
+
+    .pulse-lure {
+      animation: pulseLure 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseLure {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .delay-100 { transition-delay: 0.1s; }
+    .delay-200 { transition-delay: 0.2s; }
+    .delay-300 { transition-delay: 0.3s; }
+
+    /* Hero Animations */
+    @keyframes breathe {
+      0% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.03); filter: brightness(1.1); }
+      100% { transform: scale(1); filter: brightness(1); }
+    }
+    .animate-breathe {
+      animation: breathe 10s ease-in-out infinite;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(66, 227, 206, 0.8) 0%, rgba(66, 227, 206, 0) 70%);
+      pointer-events: none;
+      animation: float-up linear infinite;
+    }
+    
+    @keyframes float-up {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(80vh) scale(1);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(20vh) scale(1);
+      }
+      100% {
+        transform: translateY(0) scale(0);
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-on-scroll {
+        transition: none;
+        opacity: 1;
+        transform: none;
+      }
+      .pulse-lure {
+        animation: none;
+        opacity: 1;
+      }
+      .animate-breathe {
+        animation: none;
+        transform: none;
+        filter: none;
+      }
+      .particle {
+        animation: none;
+        display: none;
+      }
+      * {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+      }
+    }
+    
+    /* Scroll margin for sticky header */
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+    
+    /* Hide scrollbar for gallery but allow scroll */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+</head>
+<body class="bg-bg-deep text-text-primary font-sans antialiased overflow-x-hidden">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out bg-bg-mid/80 backdrop-blur-md" id="navbar">
+<div class="flex justify-between items-center h-20 px-content-padding-h-mobile md:px-content-padding-h max-w-[1440px] mx-auto">
+<!-- Logo -->
+<a class="flex items-center" href="#hero">
+<img alt="Flicker Logo" class="h-8 rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARDZe4daVjsgCwAZyRh0iiDpURfTDAeZN5Au-MWeAthQ4BSpzTo_gGpRPXMA1r3abGVNYe1e1R-VKsfte19Lo1g-dBm-cdAP48MBoRTtbUaLMkFlxgUzFEXISJDbhgH32VCutloGT665m3pv9-Uo5m569gwrx9hnno4D2yyUQXu95bXwbZCe6vwh6kQFvc5GolDcln-t7X-Pn3TQrgkc41bZ4_wVb1mbU43Qte-uMZA6apb1CP71YNzOig1MD2OHojPV7TTMQzkf22"/>
+</a>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="hover:text-text-primary transition-colors duration-300 font-body-sm nav-link text-secondary" data-section="about" href="#about">About</a>
+<a class="hover:text-text-primary transition-colors duration-300 font-body-sm nav-link text-text-muted" data-section="features" href="#features">Features</a>
+<a class="hover:text-text-primary transition-colors duration-300 font-body-sm nav-link text-text-muted" data-section="gallery" href="#gallery">Gallery</a>
+<a class="hover:text-text-primary transition-colors duration-300 font-body-sm nav-link text-text-muted" data-section="bosses" href="#bosses">Bosses</a>
+</div><div class="hidden md:flex items-center gap-4 ml-8 border-l border-border-teal/30 pl-8"><a class="text-text-muted hover:text-secondary transition-all" href="https://www.tiktok.com/@flickergame"><span class="material-symbols-outlined text-[20px]">share</span></a><a class="text-text-muted hover:text-secondary transition-all" href="https://www.instagram.com/flickergame"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a class="text-text-muted hover:text-secondary transition-all" href="https://www.youtube.com/@flickergame"><span class="material-symbols-outlined text-[20px]">play_circle</span></a></div>
+<!-- Desktop CTA -->
+<a class="hidden md:flex items-center justify-center bg-primary-container text-text-primary font-bold text-[16px] rounded-full px-6 py-3 hover:scale-105 hover:brightness-110 transition-all duration-200" href="https://store.steampowered.com/app/XXXXX/Flicker/" rel="noopener noreferrer" target="_blank">
+        ♥ Wishlist on Steam
+      </a>
+<!-- Mobile Hamburger -->
+<button class="md:hidden text-text-primary p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="hidden md:hidden absolute top-20 left-0 w-full bg-bg-mid/95 backdrop-blur-md border-t border-border-teal shadow-lg flex flex-col p-4 gap-4" id="mobile-menu">
+<a class="text-text-muted hover:text-text-primary py-3 text-center font-body-sm nav-link-mobile" href="#about">About</a>
+<a class="text-text-muted hover:text-text-primary py-3 text-center font-body-sm nav-link-mobile" href="#features">Features</a>
+<a class="text-text-muted hover:text-text-primary py-3 text-center font-body-sm nav-link-mobile" href="#gallery">Gallery</a>
+<a class="text-text-muted hover:text-text-primary py-3 text-center font-body-sm nav-link-mobile" href="#bosses">Bosses</a>
+<a class="w-full mt-4 bg-primary-container text-text-primary font-bold text-[16px] rounded-full py-4 text-center hover:brightness-110 transition-all" href="https://store.steampowered.com/app/XXXXX/Flicker/" rel="noopener noreferrer" target="_blank">
+        ♥ Wishlist on Steam
+      </a>
+</div>
+</nav>
+<!-- Section 2: Hero -->
+<section class="relative w-full min-h-[600px] md:min-h-screen max-h-[900px] flex items-center justify-center bg-bg-deep overflow-hidden" id="hero">
+<!-- Background Image -->
+<div class="absolute inset-0 w-full h-full">
+<img alt="A massive, terrifying deep-sea boss with two enormous, glowing bioluminescent eyes staring out from the pitch-black abyss." class="w-full h-full object-cover object-center animate-breathe rendering-pixelated" src="https://lh3.googleusercontent.com/aida/ADBb0uh_jk_YXphCPen0y2AGv0HP_9mVd--ZUs9GKhdM58Jaya4nR1_TRqc8Qdet5CEoXwcdoJGYzXli1c3illWIaveo1U3zTOF1YBxalsWxMMWVG-cogNT3OfMFUJRvYBmdBaIQVM-hkcUnw0ihd4o8LBsix0oi_iwYK6iM9fnCENE9jROmUhij2771tJK4FZ9qX3NJhT0qbRn106W8jZlAPTcZe7PxaZfSDCdJLZAhALLS06V_pOhRVfpG4fx9"/>
+</div>
+<!-- Particle Container -->
+<div class="absolute inset-0 z-[5] overflow-hidden pointer-events-none" id="particle-container"><div class="particle" style="width: 5.48049px; height: 5.48049px; left: 65.8282%; animation-duration: 12.2731s; animation-delay: 3.83148s;"></div><div class="particle" style="width: 2.56823px; height: 2.56823px; left: 19.5956%; animation-duration: 11.1957s; animation-delay: 1.33605s;"></div><div class="particle" style="width: 3.10086px; height: 3.10086px; left: 7.13444%; animation-duration: 14.2894s; animation-delay: 0.504266s;"></div><div class="particle" style="width: 3.85904px; height: 3.85904px; left: 10.9789%; animation-duration: 14.5769s; animation-delay: 2.63184s;"></div><div class="particle" style="width: 5.5012px; height: 5.5012px; left: 33.1423%; animation-duration: 12.2959s; animation-delay: 3.61851s;"></div><div class="particle" style="width: 7.74348px; height: 7.74348px; left: 93.4771%; animation-duration: 11.0654s; animation-delay: 4.30646s;"></div><div class="particle" style="width: 4.23816px; height: 4.23816px; left: 91.2457%; animation-duration: 14.1651s; animation-delay: 2.61202s;"></div><div class="particle" style="width: 2.9849px; height: 2.9849px; left: 49.8432%; animation-duration: 14.3551s; animation-delay: 4.92836s;"></div><div class="particle" style="width: 4.21851px; height: 4.21851px; left: 75.7739%; animation-duration: 9.86055s; animation-delay: 3.82814s;"></div><div class="particle" style="width: 4.13107px; height: 4.13107px; left: 39.7193%; animation-duration: 11.9652s; animation-delay: 3.86315s;"></div><div class="particle" style="width: 6.37062px; height: 6.37062px; left: 9.70583%; animation-duration: 8.14904s; animation-delay: 0.760846s;"></div><div class="particle" style="width: 2.41881px; height: 2.41881px; left: 39.5699%; animation-duration: 10.8988s; animation-delay: 3.85617s;"></div><div class="particle" style="width: 6.91483px; height: 6.91483px; left: 64.9863%; animation-duration: 13.9105s; animation-delay: 0.888246s;"></div><div class="particle" style="width: 5.50479px; height: 5.50479px; left: 14.5846%; animation-duration: 7.67721s; animation-delay: 3.39639s;"></div><div class="particle" style="width: 4.91923px; height: 4.91923px; left: 59.2991%; animation-duration: 13.1572s; animation-delay: 3.95969s;"></div><div class="particle" style="width: 4.06709px; height: 4.06709px; left: 73.0647%; animation-duration: 6.42621s; animation-delay: 0.0268287s;"></div><div class="particle" style="width: 5.18353px; height: 5.18353px; left: 44.9478%; animation-duration: 14.2697s; animation-delay: 1.10611s;"></div><div class="particle" style="width: 6.45015px; height: 6.45015px; left: 19.8342%; animation-duration: 7.62545s; animation-delay: 0.577983s;"></div><div class="particle" style="width: 6.4768px; height: 6.4768px; left: 9.63412%; animation-duration: 9.56195s; animation-delay: 0.646422s;"></div><div class="particle" style="width: 5.29076px; height: 5.29076px; left: 76.8544%; animation-duration: 14.2195s; animation-delay: 0.128128s;"></div><div class="particle" style="width: 7.66406px; height: 7.66406px; left: 7.31164%; animation-duration: 5.97543s; animation-delay: 4.23886s;"></div><div class="particle" style="width: 2.24401px; height: 2.24401px; left: 77.2887%; animation-duration: 13.2193s; animation-delay: 4.50341s;"></div><div class="particle" style="width: 4.5761px; height: 4.5761px; left: 43.361%; animation-duration: 11.2715s; animation-delay: 0.160732s;"></div><div class="particle" style="width: 6.49045px; height: 6.49045px; left: 11.5559%; animation-duration: 11.9089s; animation-delay: 2.60012s;"></div><div class="particle" style="width: 3.035px; height: 3.035px; left: 51.924%; animation-duration: 14.7452s; animation-delay: 1.18331s;"></div><div class="particle" style="width: 6.17703px; height: 6.17703px; left: 64.9694%; animation-duration: 7.54236s; animation-delay: 3.46878s;"></div><div class="particle" style="width: 2.96892px; height: 2.96892px; left: 60.3853%; animation-duration: 9.3563s; animation-delay: 3.0615s;"></div><div class="particle" style="width: 5.658px; height: 5.658px; left: 18.9152%; animation-duration: 12.3755s; animation-delay: 1.69536s;"></div><div class="particle" style="width: 5.08179px; height: 5.08179px; left: 58.5038%; animation-duration: 9.30164s; animation-delay: 3.0357s;"></div><div class="particle" style="width: 4.95931px; height: 4.95931px; left: 42.8215%; animation-duration: 5.37394s; animation-delay: 3.48712s;"></div><div class="particle" style="width: 5.52195px; height: 5.52195px; left: 37.0685%; animation-duration: 10.8511s; animation-delay: 3.02203s;"></div><div class="particle" style="width: 6.51941px; height: 6.51941px; left: 48.5422%; animation-duration: 11.6822s; animation-delay: 0.925024s;"></div><div class="particle" style="width: 2.15233px; height: 2.15233px; left: 4.67306%; animation-duration: 13.5444s; animation-delay: 0.552926s;"></div><div class="particle" style="width: 3.2699px; height: 3.2699px; left: 91.3346%; animation-duration: 10.3756s; animation-delay: 2.36301s;"></div><div class="particle" style="width: 3.18014px; height: 3.18014px; left: 30.6618%; animation-duration: 5.39678s; animation-delay: 3.22188s;"></div><div class="particle" style="width: 3.19739px; height: 3.19739px; left: 28.1113%; animation-duration: 12.596s; animation-delay: 4.54865s;"></div><div class="particle" style="width: 3.26971px; height: 3.26971px; left: 78.2416%; animation-duration: 7.18237s; animation-delay: 3.55335s;"></div><div class="particle" style="width: 3.54277px; height: 3.54277px; left: 78.0402%; animation-duration: 6.62472s; animation-delay: 4.81022s;"></div><div class="particle" style="width: 2.24511px; height: 2.24511px; left: 48.6274%; animation-duration: 8.02362s; animation-delay: 0.389401s;"></div><div class="particle" style="width: 6.61444px; height: 6.61444px; left: 62.9182%; animation-duration: 9.75852s; animation-delay: 0.0579642s;"></div><div class="particle" style="width: 6.24645px; height: 6.24645px; left: 64.4227%; animation-duration: 12.3132s; animation-delay: 3.84525s;"></div><div class="particle" style="width: 6.60844px; height: 6.60844px; left: 82.8118%; animation-duration: 14.5612s; animation-delay: 3.51028s;"></div><div class="particle" style="width: 7.90867px; height: 7.90867px; left: 54.8727%; animation-duration: 10.092s; animation-delay: 1.0288s;"></div><div class="particle" style="width: 2.07511px; height: 2.07511px; left: 42.7019%; animation-duration: 5.8919s; animation-delay: 0.470004s;"></div><div class="particle" style="width: 3.47878px; height: 3.47878px; left: 44.7975%; animation-duration: 12.636s; animation-delay: 0.408648s;"></div><div class="particle" style="width: 4.02158px; height: 4.02158px; left: 58.3738%; animation-duration: 8.50533s; animation-delay: 2.42534s;"></div><div class="particle" style="width: 7.46534px; height: 7.46534px; left: 76.9519%; animation-duration: 13.241s; animation-delay: 3.95375s;"></div><div class="particle" style="width: 4.37444px; height: 4.37444px; left: 74.4058%; animation-duration: 5.42461s; animation-delay: 1.97865s;"></div><div class="particle" style="width: 5.68256px; height: 5.68256px; left: 2.33165%; animation-duration: 13.0735s; animation-delay: 4.48181s;"></div><div class="particle" style="width: 6.61626px; height: 6.61626px; left: 94.4781%; animation-duration: 5.9261s; animation-delay: 0.432305s;"></div><div class="particle" style="width: 4.96574px; height: 4.96574px; left: 61.495%; animation-duration: 11.9373s; animation-delay: 2.24857s;"></div><div class="particle" style="width: 7.99056px; height: 7.99056px; left: 22.9495%; animation-duration: 12.9727s; animation-delay: 0.504912s;"></div><div class="particle" style="width: 7.56305px; height: 7.56305px; left: 44.6379%; animation-duration: 8.93777s; animation-delay: 1.26383s;"></div><div class="particle" style="width: 6.58211px; height: 6.58211px; left: 46.4038%; animation-duration: 10.6879s; animation-delay: 4.18195s;"></div><div class="particle" style="width: 3.70274px; height: 3.70274px; left: 89.5589%; animation-duration: 13.7623s; animation-delay: 4.62114s;"></div><div class="particle" style="width: 5.63623px; height: 5.63623px; left: 37.2668%; animation-duration: 13.6136s; animation-delay: 1.72612s;"></div><div class="particle" style="width: 6.28023px; height: 6.28023px; left: 33.1234%; animation-duration: 11.1219s; animation-delay: 3.94269s;"></div><div class="particle" style="width: 6.65464px; height: 6.65464px; left: 95.5105%; animation-duration: 12.2752s; animation-delay: 1.96405s;"></div><div class="particle" style="width: 6.18419px; height: 6.18419px; left: 60.3416%; animation-duration: 12.1112s; animation-delay: 4.13255s;"></div><div class="particle" style="width: 6.46828px; height: 6.46828px; left: 94.9497%; animation-duration: 14.5568s; animation-delay: 4.83669s;"></div><div class="particle" style="width: 7.37662px; height: 7.37662px; left: 61.3852%; animation-duration: 14.233s; animation-delay: 4.16008s;"></div><div class="particle" style="width: 3.40727px; height: 3.40727px; left: 72.0781%; animation-duration: 12.345s; animation-delay: 4.45241s;"></div><div class="particle" style="width: 7.92039px; height: 7.92039px; left: 93.736%; animation-duration: 12.9945s; animation-delay: 2.48229s;"></div><div class="particle" style="width: 4.84428px; height: 4.84428px; left: 27.9527%; animation-duration: 13.9864s; animation-delay: 4.4403s;"></div><div class="particle" style="width: 6.73431px; height: 6.73431px; left: 64.6898%; animation-duration: 14.556s; animation-delay: 0.593379s;"></div><div class="particle" style="width: 2.35328px; height: 2.35328px; left: 89.4123%; animation-duration: 14.829s; animation-delay: 1.81143s;"></div><div class="particle" style="width: 6.39663px; height: 6.39663px; left: 71.306%; animation-duration: 13.6012s; animation-delay: 0.0225011s;"></div><div class="particle" style="width: 5.73427px; height: 5.73427px; left: 51.5187%; animation-duration: 7.18595s; animation-delay: 3.00468s;"></div><div class="particle" style="width: 4.99566px; height: 4.99566px; left: 36.2231%; animation-duration: 8.80668s; animation-delay: 1.92629s;"></div><div class="particle" style="width: 5.74369px; height: 5.74369px; left: 31.0279%; animation-duration: 9.89303s; animation-delay: 1.371s;"></div><div class="particle" style="width: 6.25981px; height: 6.25981px; left: 15.524%; animation-duration: 6.51721s; animation-delay: 4.45193s;"></div><div class="particle" style="width: 5.82262px; height: 5.82262px; left: 59.0699%; animation-duration: 13.9469s; animation-delay: 4.66627s;"></div><div class="particle" style="width: 3.42398px; height: 3.42398px; left: 91.1473%; animation-duration: 10.6577s; animation-delay: 2.20628s;"></div><div class="particle" style="width: 2.21126px; height: 2.21126px; left: 65.1757%; animation-duration: 13.2925s; animation-delay: 3.64662s;"></div><div class="particle" style="width: 4.67544px; height: 4.67544px; left: 16.5615%; animation-duration: 13.5891s; animation-delay: 4.05221s;"></div><div class="particle" style="width: 6.78366px; height: 6.78366px; left: 83.4099%; animation-duration: 8.04413s; animation-delay: 4.95424s;"></div><div class="particle" style="width: 7.3057px; height: 7.3057px; left: 20.8101%; animation-duration: 9.21188s; animation-delay: 2.26983s;"></div><div class="particle" style="width: 3.50051px; height: 3.50051px; left: 26.1655%; animation-duration: 9.34388s; animation-delay: 3.52282s;"></div><div class="particle" style="width: 4.66475px; height: 4.66475px; left: 65.8187%; animation-duration: 14.4696s; animation-delay: 0.383556s;"></div><div class="particle" style="width: 5.39259px; height: 5.39259px; left: 68.0419%; animation-duration: 7.32799s; animation-delay: 4.1629s;"></div><div class="particle" style="width: 7.86479px; height: 7.86479px; left: 10.6609%; animation-duration: 11.1189s; animation-delay: 3.13205s;"></div><div class="particle" style="width: 7.78811px; height: 7.78811px; left: 48.5494%; animation-duration: 11.0105s; animation-delay: 3.99027s;"></div><div class="particle" style="width: 5.09254px; height: 5.09254px; left: 24.3829%; animation-duration: 6.81089s; animation-delay: 1.45825s;"></div><div class="particle" style="width: 5.02208px; height: 5.02208px; left: 88.7494%; animation-duration: 7.26069s; animation-delay: 0.56407s;"></div><div class="particle" style="width: 4.4237px; height: 4.4237px; left: 1.1561%; animation-duration: 8.2158s; animation-delay: 4.33036s;"></div><div class="particle" style="width: 3.63843px; height: 3.63843px; left: 75.7667%; animation-duration: 5.20199s; animation-delay: 2.46582s;"></div><div class="particle" style="width: 4.88157px; height: 4.88157px; left: 21.95%; animation-duration: 5.09266s; animation-delay: 3.38871s;"></div><div class="particle" style="width: 6.83092px; height: 6.83092px; left: 61.9574%; animation-duration: 11.4639s; animation-delay: 3.65678s;"></div><div class="particle" style="width: 5.16944px; height: 5.16944px; left: 77.207%; animation-duration: 5.34528s; animation-delay: 0.634634s;"></div><div class="particle" style="width: 4.59434px; height: 4.59434px; left: 33.3609%; animation-duration: 6.81904s; animation-delay: 1.51439s;"></div><div class="particle" style="width: 4.30875px; height: 4.30875px; left: 42.0203%; animation-duration: 14.2829s; animation-delay: 3.51629s;"></div><div class="particle" style="width: 7.49053px; height: 7.49053px; left: 49.6015%; animation-duration: 9.40008s; animation-delay: 1.09005s;"></div><div class="particle" style="width: 7.03626px; height: 7.03626px; left: 94.7709%; animation-duration: 9.61894s; animation-delay: 4.7878s;"></div><div class="particle" style="width: 6.74179px; height: 6.74179px; left: 96.6894%; animation-duration: 6.53291s; animation-delay: 4.4066s;"></div><div class="particle" style="width: 3.40691px; height: 3.40691px; left: 25.5419%; animation-duration: 8.58613s; animation-delay: 4.84223s;"></div><div class="particle" style="width: 4.12166px; height: 4.12166px; left: 48.691%; animation-duration: 5.3619s; animation-delay: 4.40147s;"></div><div class="particle" style="width: 4.93268px; height: 4.93268px; left: 93.8275%; animation-duration: 13.5532s; animation-delay: 2.22606s;"></div><div class="particle" style="width: 6.64281px; height: 6.64281px; left: 16.4152%; animation-duration: 8.72133s; animation-delay: 3.59973s;"></div><div class="particle" style="width: 2.08339px; height: 2.08339px; left: 99.613%; animation-duration: 13.0105s; animation-delay: 4.64225s;"></div><div class="particle" style="width: 3.44323px; height: 3.44323px; left: 99.0266%; animation-duration: 11.263s; animation-delay: 2.24381s;"></div><div class="particle" style="width: 4.97312px; height: 4.97312px; left: 78.9225%; animation-duration: 9.35181s; animation-delay: 3.92436s;"></div><div class="particle" style="width: 2.14296px; height: 2.14296px; left: 29.3062%; animation-duration: 5.98479s; animation-delay: 1.35312s;"></div><div class="particle" style="width: 6.26646px; height: 6.26646px; left: 50.8026%; animation-duration: 14.9581s; animation-delay: 0.697782s;"></div><div class="particle" style="width: 5.62348px; height: 5.62348px; left: 0.747423%; animation-duration: 14.7499s; animation-delay: 1.74004s;"></div><div class="particle" style="width: 6.65983px; height: 6.65983px; left: 30.5329%; animation-duration: 6.98296s; animation-delay: 2.84999s;"></div><div class="particle" style="width: 4.02936px; height: 4.02936px; left: 65.3571%; animation-duration: 14.45s; animation-delay: 4.61204s;"></div><div class="particle" style="width: 6.1552px; height: 6.1552px; left: 44.1005%; animation-duration: 14.919s; animation-delay: 2.11612s;"></div><div class="particle" style="width: 7.29262px; height: 7.29262px; left: 27.3226%; animation-duration: 12.5054s; animation-delay: 2.35147s;"></div><div class="particle" style="width: 7.43131px; height: 7.43131px; left: 94.0218%; animation-duration: 13.9855s; animation-delay: 2.09986s;"></div><div class="particle" style="width: 3.81188px; height: 3.81188px; left: 34.911%; animation-duration: 12.2082s; animation-delay: 4.43074s;"></div><div class="particle" style="width: 4.21179px; height: 4.21179px; left: 68.7098%; animation-duration: 13.113s; animation-delay: 4.73907s;"></div><div class="particle" style="width: 7.79489px; height: 7.79489px; left: 83.665%; animation-duration: 10.5629s; animation-delay: 1.26729s;"></div><div class="particle" style="width: 2.68392px; height: 2.68392px; left: 83.3719%; animation-duration: 12.8185s; animation-delay: 3.28776s;"></div><div class="particle" style="width: 3.36953px; height: 3.36953px; left: 48.5416%; animation-duration: 6.0307s; animation-delay: 3.03993s;"></div><div class="particle" style="width: 3.95346px; height: 3.95346px; left: 78.047%; animation-duration: 12.6829s; animation-delay: 4.61006s;"></div><div class="particle" style="width: 3.56777px; height: 3.56777px; left: 55.7784%; animation-duration: 9.96148s; animation-delay: 3.50535s;"></div><div class="particle" style="width: 5.41898px; height: 5.41898px; left: 59.26%; animation-duration: 5.7233s; animation-delay: 3.84764s;"></div><div class="particle" style="width: 7.2241px; height: 7.2241px; left: 22.7955%; animation-duration: 13.6315s; animation-delay: 4.46323s;"></div><div class="particle" style="width: 2.35017px; height: 2.35017px; left: 18.0507%; animation-duration: 13.712s; animation-delay: 1.26675s;"></div><div class="particle" style="width: 4.34689px; height: 4.34689px; left: 23.4708%; animation-duration: 12.5912s; animation-delay: 4.99697s;"></div><div class="particle" style="width: 7.01542px; height: 7.01542px; left: 2.81752%; animation-duration: 12.6189s; animation-delay: 1.99871s;"></div><div class="particle" style="width: 7.93775px; height: 7.93775px; left: 0.510553%; animation-duration: 12.8467s; animation-delay: 0.710071s;"></div><div class="particle" style="width: 4.28717px; height: 4.28717px; left: 28.2999%; animation-duration: 12.7689s; animation-delay: 1.0492s;"></div><div class="particle" style="width: 2.13253px; height: 2.13253px; left: 94.576%; animation-duration: 10.4005s; animation-delay: 0.914901s;"></div><div class="particle" style="width: 6.23497px; height: 6.23497px; left: 32.3257%; animation-duration: 13.2017s; animation-delay: 3.81991s;"></div><div class="particle" style="width: 5.54092px; height: 5.54092px; left: 28.0584%; animation-duration: 10.0554s; animation-delay: 1.76025s;"></div><div class="particle" style="width: 2.48617px; height: 2.48617px; left: 94.9396%; animation-duration: 10.9025s; animation-delay: 3.07574s;"></div><div class="particle" style="width: 6.88002px; height: 6.88002px; left: 92.9124%; animation-duration: 10.1822s; animation-delay: 4.39067s;"></div><div class="particle" style="width: 6.39541px; height: 6.39541px; left: 24.0987%; animation-duration: 9.00496s; animation-delay: 2.53424s;"></div><div class="particle" style="width: 2.65655px; height: 2.65655px; left: 60.0964%; animation-duration: 7.95715s; animation-delay: 2.25652s;"></div><div class="particle" style="width: 2.04949px; height: 2.04949px; left: 72.1736%; animation-duration: 12.2222s; animation-delay: 0.251193s;"></div><div class="particle" style="width: 6.64726px; height: 6.64726px; left: 76.7878%; animation-duration: 14.9223s; animation-delay: 4.25928s;"></div><div class="particle" style="width: 7.76459px; height: 7.76459px; left: 99.8428%; animation-duration: 11.2172s; animation-delay: 0.0759842s;"></div><div class="particle" style="width: 5.46461px; height: 5.46461px; left: 13.6549%; animation-duration: 11.8517s; animation-delay: 0.335616s;"></div><div class="particle" style="width: 2.7397px; height: 2.7397px; left: 28.2697%; animation-duration: 13.2788s; animation-delay: 3.00472s;"></div><div class="particle" style="width: 3.30412px; height: 3.30412px; left: 79.4756%; animation-duration: 8.04064s; animation-delay: 3.13858s;"></div><div class="particle" style="width: 3.84847px; height: 3.84847px; left: 37.7071%; animation-duration: 8.06401s; animation-delay: 2.82414s;"></div><div class="particle" style="width: 5.2627px; height: 5.2627px; left: 68.7508%; animation-duration: 11.3006s; animation-delay: 0.662413s;"></div><div class="particle" style="width: 4.07101px; height: 4.07101px; left: 2.26605%; animation-duration: 9.27445s; animation-delay: 1.01803s;"></div><div class="particle" style="width: 2.27514px; height: 2.27514px; left: 99.0754%; animation-duration: 10.4948s; animation-delay: 3.92936s;"></div><div class="particle" style="width: 5.61979px; height: 5.61979px; left: 23.2896%; animation-duration: 9.6067s; animation-delay: 2.16745s;"></div><div class="particle" style="width: 3.09666px; height: 3.09666px; left: 89.1534%; animation-duration: 8.89755s; animation-delay: 4.21349s;"></div><div class="particle" style="width: 3.1993px; height: 3.1993px; left: 37.7094%; animation-duration: 11.7053s; animation-delay: 3.47831s;"></div><div class="particle" style="width: 7.53096px; height: 7.53096px; left: 70.2993%; animation-duration: 13.8394s; animation-delay: 2.70612s;"></div><div class="particle" style="width: 4.02174px; height: 4.02174px; left: 20.4383%; animation-duration: 12.7309s; animation-delay: 1.40212s;"></div><div class="particle" style="width: 3.5329px; height: 3.5329px; left: 93.9271%; animation-duration: 11.3705s; animation-delay: 0.732115s;"></div><div class="particle" style="width: 2.37798px; height: 2.37798px; left: 54.5175%; animation-duration: 10.3842s; animation-delay: 1.73833s;"></div><div class="particle" style="width: 3.55876px; height: 3.55876px; left: 62.5121%; animation-duration: 9.29471s; animation-delay: 4.09318s;"></div><div class="particle" style="width: 4.74517px; height: 4.74517px; left: 43.7872%; animation-duration: 10.025s; animation-delay: 0.854451s;"></div><div class="particle" style="width: 3.91573px; height: 3.91573px; left: 33.8202%; animation-duration: 6.24561s; animation-delay: 0.147701s;"></div><div class="particle" style="width: 3.22825px; height: 3.22825px; left: 88.7692%; animation-duration: 5.84827s; animation-delay: 4.04903s;"></div><div class="particle" style="width: 3.18676px; height: 3.18676px; left: 75.3623%; animation-duration: 14.7578s; animation-delay: 4.84838s;"></div><div class="particle" style="width: 7.93645px; height: 7.93645px; left: 23.3678%; animation-duration: 12.2977s; animation-delay: 2.61766s;"></div><div class="particle" style="width: 2.78752px; height: 2.78752px; left: 54.4888%; animation-duration: 8.37152s; animation-delay: 3.19592s;"></div><div class="particle" style="width: 7.67472px; height: 7.67472px; left: 53.5685%; animation-duration: 13.0589s; animation-delay: 3.99021s;"></div><div class="particle" style="width: 5.46607px; height: 5.46607px; left: 92.8669%; animation-duration: 10.8695s; animation-delay: 0.327032s;"></div><div class="particle" style="width: 7.17573px; height: 7.17573px; left: 56.386%; animation-duration: 11.1192s; animation-delay: 0.722088s;"></div><div class="particle" style="width: 5.62106px; height: 5.62106px; left: 2.79605%; animation-duration: 12.1742s; animation-delay: 2.38208s;"></div><div class="particle" style="width: 3.76513px; height: 3.76513px; left: 41.0089%; animation-duration: 5.64286s; animation-delay: 2.14449s;"></div><div class="particle" style="width: 7.92851px; height: 7.92851px; left: 64.6423%; animation-duration: 10.7844s; animation-delay: 0.515873s;"></div><div class="particle" style="width: 2.39817px; height: 2.39817px; left: 15.0448%; animation-duration: 13.7384s; animation-delay: 0.1363s;"></div><div class="particle" style="width: 3.25562px; height: 3.25562px; left: 34.8909%; animation-duration: 13.9137s; animation-delay: 0.65987s;"></div><div class="particle" style="width: 5.27998px; height: 5.27998px; left: 95.642%; animation-duration: 6.98863s; animation-delay: 1.7445s;"></div><div class="particle" style="width: 6.34502px; height: 6.34502px; left: 3.1426%; animation-duration: 12.3847s; animation-delay: 3.57951s;"></div><div class="particle" style="width: 5.20716px; height: 5.20716px; left: 52.9225%; animation-duration: 5.63174s; animation-delay: 2.82727s;"></div><div class="particle" style="width: 2.32653px; height: 2.32653px; left: 79.7539%; animation-duration: 9.94829s; animation-delay: 0.256406s;"></div><div class="particle" style="width: 2.85566px; height: 2.85566px; left: 90.9422%; animation-duration: 7.24435s; animation-delay: 2.62369s;"></div><div class="particle" style="width: 3.29567px; height: 3.29567px; left: 34.243%; animation-duration: 11.0915s; animation-delay: 4.86838s;"></div><div class="particle" style="width: 7.31268px; height: 7.31268px; left: 95.487%; animation-duration: 6.52852s; animation-delay: 0.960071s;"></div><div class="particle" style="width: 5.44092px; height: 5.44092px; left: 71.5842%; animation-duration: 7.60199s; animation-delay: 1.77156s;"></div><div class="particle" style="width: 6.45818px; height: 6.45818px; left: 48.5277%; animation-duration: 12.1987s; animation-delay: 2.74326s;"></div><div class="particle" style="width: 2.1281px; height: 2.1281px; left: 70.5361%; animation-duration: 5.18198s; animation-delay: 0.082803s;"></div><div class="particle" style="width: 7.79819px; height: 7.79819px; left: 4.46886%; animation-duration: 5.43066s; animation-delay: 3.09809s;"></div><div class="particle" style="width: 2.38689px; height: 2.38689px; left: 19.3824%; animation-duration: 7.57623s; animation-delay: 0.21908s;"></div><div class="particle" style="width: 6.13202px; height: 6.13202px; left: 61.4596%; animation-duration: 14.0596s; animation-delay: 4.37752s;"></div><div class="particle" style="width: 2.35205px; height: 2.35205px; left: 18.5385%; animation-duration: 12.0738s; animation-delay: 3.20057s;"></div><div class="particle" style="width: 3.01224px; height: 3.01224px; left: 63.1488%; animation-duration: 10.0601s; animation-delay: 3.05061s;"></div><div class="particle" style="width: 4.80253px; height: 4.80253px; left: 93.8007%; animation-duration: 11.5023s; animation-delay: 1.63395s;"></div><div class="particle" style="width: 4.69657px; height: 4.69657px; left: 75.9802%; animation-duration: 7.23824s; animation-delay: 4.37423s;"></div><div class="particle" style="width: 7.6818px; height: 7.6818px; left: 13.1924%; animation-duration: 14.7337s; animation-delay: 3.10999s;"></div><div class="particle" style="width: 7.66839px; height: 7.66839px; left: 2.16656%; animation-duration: 14.0972s; animation-delay: 3.97038s;"></div><div class="particle" style="width: 7.71889px; height: 7.71889px; left: 98.0367%; animation-duration: 13.2157s; animation-delay: 2.99622s;"></div><div class="particle" style="width: 2.13424px; height: 2.13424px; left: 59.4407%; animation-duration: 13.1762s; animation-delay: 0.362724s;"></div><div class="particle" style="width: 2.56195px; height: 2.56195px; left: 0.491227%; animation-duration: 13.1805s; animation-delay: 2.81327s;"></div><div class="particle" style="width: 5.25382px; height: 5.25382px; left: 23.4506%; animation-duration: 13.9733s; animation-delay: 0.0721569s;"></div><div class="particle" style="width: 2.86049px; height: 2.86049px; left: 35.3756%; animation-duration: 12.5106s; animation-delay: 1.27662s;"></div><div class="particle" style="width: 7.15584px; height: 7.15584px; left: 35.4423%; animation-duration: 13.8148s; animation-delay: 4.33071s;"></div><div class="particle" style="width: 7.05001px; height: 7.05001px; left: 58.9415%; animation-duration: 11.739s; animation-delay: 2.84627s;"></div><div class="particle" style="width: 3.64351px; height: 3.64351px; left: 85.3355%; animation-duration: 11.0517s; animation-delay: 0.294225s;"></div><div class="particle" style="width: 6.40133px; height: 6.40133px; left: 84.848%; animation-duration: 14.5758s; animation-delay: 4.92828s;"></div><div class="particle" style="width: 5.94439px; height: 5.94439px; left: 41.4419%; animation-duration: 7.70341s; animation-delay: 4.82447s;"></div><div class="particle" style="width: 6.41931px; height: 6.41931px; left: 43.0477%; animation-duration: 8.55573s; animation-delay: 3.31666s;"></div><div class="particle" style="width: 4.84624px; height: 4.84624px; left: 73.7661%; animation-duration: 9.64283s; animation-delay: 4.96717s;"></div><div class="particle" style="width: 3.31166px; height: 3.31166px; left: 6.21438%; animation-duration: 8.68372s; animation-delay: 1.16968s;"></div><div class="particle" style="width: 3.15216px; height: 3.15216px; left: 50.6796%; animation-duration: 13.7027s; animation-delay: 1.13086s;"></div><div class="particle" style="width: 2.49251px; height: 2.49251px; left: 67.9848%; animation-duration: 13.4515s; animation-delay: 3.48499s;"></div><div class="particle" style="width: 4.91478px; height: 4.91478px; left: 98.8684%; animation-duration: 7.23327s; animation-delay: 4.98536s;"></div><div class="particle" style="width: 2.26446px; height: 2.26446px; left: 76.0336%; animation-duration: 10.3448s; animation-delay: 4.56148s;"></div><div class="particle" style="width: 2.80437px; height: 2.80437px; left: 15.2172%; animation-duration: 13.1031s; animation-delay: 3.91246s;"></div><div class="particle" style="width: 5.42481px; height: 5.42481px; left: 84.7813%; animation-duration: 5.27971s; animation-delay: 2.7963s;"></div><div class="particle" style="width: 7.01755px; height: 7.01755px; left: 27.7495%; animation-duration: 5.61845s; animation-delay: 4.74116s;"></div><div class="particle" style="width: 6.75144px; height: 6.75144px; left: 64.7263%; animation-duration: 13.0063s; animation-delay: 3.42822s;"></div><div class="particle" style="width: 3.03416px; height: 3.03416px; left: 1.88812%; animation-duration: 9.02979s; animation-delay: 0.908317s;"></div><div class="particle" style="width: 5.86672px; height: 5.86672px; left: 29.0678%; animation-duration: 12.3981s; animation-delay: 3.68591s;"></div><div class="particle" style="width: 7.54631px; height: 7.54631px; left: 77.4466%; animation-duration: 10.9599s; animation-delay: 1.91075s;"></div><div class="particle" style="width: 7.39137px; height: 7.39137px; left: 8.37553%; animation-duration: 7.0744s; animation-delay: 1.66939s;"></div><div class="particle" style="width: 4.0915px; height: 4.0915px; left: 86.1506%; animation-duration: 12.2457s; animation-delay: 3.60958s;"></div><div class="particle" style="width: 5.16933px; height: 5.16933px; left: 76.5468%; animation-duration: 10.4792s; animation-delay: 0.450092s;"></div><div class="particle" style="width: 4.03673px; height: 4.03673px; left: 36.346%; animation-duration: 12.0113s; animation-delay: 0.199924s;"></div><div class="particle" style="width: 3.15866px; height: 3.15866px; left: 87.541%; animation-duration: 12.438s; animation-delay: 1.21729s;"></div><div class="particle" style="width: 6.80079px; height: 6.80079px; left: 58.3327%; animation-duration: 6.2314s; animation-delay: 1.96489s;"></div><div class="particle" style="width: 3.65237px; height: 3.65237px; left: 67.0285%; animation-duration: 7.7224s; animation-delay: 0.298098s;"></div><div class="particle" style="width: 7.96185px; height: 7.96185px; left: 8.80235%; animation-duration: 13.755s; animation-delay: 2.61332s;"></div><div class="particle" style="width: 2.72926px; height: 2.72926px; left: 78.6725%; animation-duration: 13.143s; animation-delay: 1.80255s;"></div><div class="particle" style="width: 7.69784px; height: 7.69784px; left: 86.7555%; animation-duration: 8.63577s; animation-delay: 3.83157s;"></div><div class="particle" style="width: 3.57498px; height: 3.57498px; left: 76.0781%; animation-duration: 9.93493s; animation-delay: 4.95648s;"></div><div class="particle" style="width: 7.60189px; height: 7.60189px; left: 20.1393%; animation-duration: 10.1196s; animation-delay: 4.63359s;"></div><div class="particle" style="width: 4.59424px; height: 4.59424px; left: 1.82731%; animation-duration: 5.75469s; animation-delay: 2.54467s;"></div><div class="particle" style="width: 5.62042px; height: 5.62042px; left: 90.8125%; animation-duration: 12.7741s; animation-delay: 0.99663s;"></div><div class="particle" style="width: 5.2492px; height: 5.2492px; left: 50.3971%; animation-duration: 11.1331s; animation-delay: 3.96652s;"></div><div class="particle" style="width: 6.28102px; height: 6.28102px; left: 76.4577%; animation-duration: 6.28382s; animation-delay: 4.69433s;"></div><div class="particle" style="width: 2.19338px; height: 2.19338px; left: 94.718%; animation-duration: 13.434s; animation-delay: 0.799035s;"></div><div class="particle" style="width: 7.31427px; height: 7.31427px; left: 59.9607%; animation-duration: 12.0166s; animation-delay: 0.589149s;"></div><div class="particle" style="width: 3.43779px; height: 3.43779px; left: 3.02715%; animation-duration: 10.4728s; animation-delay: 4.41479s;"></div><div class="particle" style="width: 7.35611px; height: 7.35611px; left: 18.328%; animation-duration: 14.8352s; animation-delay: 4.9055s;"></div><div class="particle" style="width: 2.14829px; height: 2.14829px; left: 77.0016%; animation-duration: 8.6988s; animation-delay: 2.22454s;"></div><div class="particle" style="width: 4.12184px; height: 4.12184px; left: 76.0714%; animation-duration: 7.73926s; animation-delay: 1.54194s;"></div><div class="particle" style="width: 7.73859px; height: 7.73859px; left: 24.3422%; animation-duration: 14.9899s; animation-delay: 1.414s;"></div><div class="particle" style="width: 2.73235px; height: 2.73235px; left: 35.3257%; animation-duration: 7.27789s; animation-delay: 1.30906s;"></div><div class="particle" style="width: 5.88485px; height: 5.88485px; left: 39.8369%; animation-duration: 10.8019s; animation-delay: 3.1692s;"></div><div class="particle" style="width: 5.80655px; height: 5.80655px; left: 56.7973%; animation-duration: 10.7635s; animation-delay: 2.85833s;"></div><div class="particle" style="width: 5.26859px; height: 5.26859px; left: 19.9966%; animation-duration: 7.7022s; animation-delay: 4.91332s;"></div><div class="particle" style="width: 3.35644px; height: 3.35644px; left: 80.1069%; animation-duration: 14.3269s; animation-delay: 3.82088s;"></div><div class="particle" style="width: 3.77396px; height: 3.77396px; left: 20.0404%; animation-duration: 6.03553s; animation-delay: 3.93203s;"></div><div class="particle" style="width: 3.31834px; height: 3.31834px; left: 49.2303%; animation-duration: 12.7871s; animation-delay: 3.32054s;"></div><div class="particle" style="width: 3.85749px; height: 3.85749px; left: 39.697%; animation-duration: 6.15816s; animation-delay: 4.21069s;"></div><div class="particle" style="width: 6.29431px; height: 6.29431px; left: 59.3089%; animation-duration: 5.51406s; animation-delay: 4.29839s;"></div><div class="particle" style="width: 3.22902px; height: 3.22902px; left: 97.6155%; animation-duration: 14.6496s; animation-delay: 1.11501s;"></div><div class="particle" style="width: 3.73559px; height: 3.73559px; left: 28.6345%; animation-duration: 14.3435s; animation-delay: 3.38409s;"></div><div class="particle" style="width: 7.01661px; height: 7.01661px; left: 19.8567%; animation-duration: 11.9078s; animation-delay: 3.06922s;"></div><div class="particle" style="width: 3.54438px; height: 3.54438px; left: 25.5032%; animation-duration: 12.9319s; animation-delay: 0.684319s;"></div><div class="particle" style="width: 3.32686px; height: 3.32686px; left: 28.2273%; animation-duration: 14.7718s; animation-delay: 0.761001s;"></div><div class="particle" style="width: 5.35132px; height: 5.35132px; left: 64.0613%; animation-duration: 12.7542s; animation-delay: 3.12032s;"></div><div class="particle" style="width: 7.21998px; height: 7.21998px; left: 21.4828%; animation-duration: 11.1148s; animation-delay: 2.94946s;"></div><div class="particle" style="width: 4.60184px; height: 4.60184px; left: 10.3762%; animation-duration: 12.2496s; animation-delay: 1.56899s;"></div><div class="particle" style="width: 6.55472px; height: 6.55472px; left: 19.6703%; animation-duration: 13.0357s; animation-delay: 0.377735s;"></div><div class="particle" style="width: 2.25382px; height: 2.25382px; left: 5.93476%; animation-duration: 12.7027s; animation-delay: 3.74128s;"></div><div class="particle" style="width: 2.73098px; height: 2.73098px; left: 9.07404%; animation-duration: 10.3181s; animation-delay: 1.68173s;"></div><div class="particle" style="width: 7.71564px; height: 7.71564px; left: 90.0141%; animation-duration: 12.0472s; animation-delay: 4.92441s;"></div><div class="particle" style="width: 2.67628px; height: 2.67628px; left: 16.208%; animation-duration: 9.45716s; animation-delay: 3.79401s;"></div><div class="particle" style="width: 5.69429px; height: 5.69429px; left: 60.3482%; animation-duration: 12.4086s; animation-delay: 0.948522s;"></div><div class="particle" style="width: 2.30091px; height: 2.30091px; left: 83.7095%; animation-duration: 12.9901s; animation-delay: 2.4583s;"></div><div class="particle" style="width: 2.15386px; height: 2.15386px; left: 45.8712%; animation-duration: 11.3381s; animation-delay: 4.10932s;"></div><div class="particle" style="width: 7.72011px; height: 7.72011px; left: 43.3196%; animation-duration: 12.3816s; animation-delay: 3.60041s;"></div><div class="particle" style="width: 2.03039px; height: 2.03039px; left: 93.0114%; animation-duration: 8.52369s; animation-delay: 1.43053s;"></div><div class="particle" style="width: 6.81705px; height: 6.81705px; left: 83.9843%; animation-duration: 12.9179s; animation-delay: 0.421987s;"></div><div class="particle" style="width: 5.73789px; height: 5.73789px; left: 53.2377%; animation-duration: 8.14492s; animation-delay: 0.827093s;"></div><div class="particle" style="width: 2.81426px; height: 2.81426px; left: 87.9808%; animation-duration: 8.34772s; animation-delay: 3.07545s;"></div><div class="particle" style="width: 4.04197px; height: 4.04197px; left: 41.6934%; animation-duration: 9.73153s; animation-delay: 4.65652s;"></div><div class="particle" style="width: 2.86258px; height: 2.86258px; left: 39.6077%; animation-duration: 9.69123s; animation-delay: 0.960152s;"></div><div class="particle" style="width: 2.67181px; height: 2.67181px; left: 76.1853%; animation-duration: 8.6876s; animation-delay: 3.83767s;"></div><div class="particle" style="width: 2.24265px; height: 2.24265px; left: 27.4247%; animation-duration: 9.60303s; animation-delay: 3.61063s;"></div><div class="particle" style="width: 3.57371px; height: 3.57371px; left: 83.7627%; animation-duration: 13.535s; animation-delay: 0.867617s;"></div><div class="particle" style="width: 5.8825px; height: 5.8825px; left: 35.9921%; animation-duration: 8.61352s; animation-delay: 0.911063s;"></div><div class="particle" style="width: 6.84455px; height: 6.84455px; left: 84.4489%; animation-duration: 13.3264s; animation-delay: 0.473462s;"></div><div class="particle" style="width: 3.52251px; height: 3.52251px; left: 84.9753%; animation-duration: 9.11031s; animation-delay: 1.02025s;"></div><div class="particle" style="width: 4.99611px; height: 4.99611px; left: 70.1284%; animation-duration: 8.54627s; animation-delay: 1.74025s;"></div><div class="particle" style="width: 4.52139px; height: 4.52139px; left: 52.306%; animation-duration: 8.07975s; animation-delay: 4.84691s;"></div><div class="particle" style="width: 5.7266px; height: 5.7266px; left: 89.2204%; animation-duration: 8.10711s; animation-delay: 4.24989s;"></div><div class="particle" style="width: 5.95295px; height: 5.95295px; left: 51.4016%; animation-duration: 10.0408s; animation-delay: 4.47557s;"></div><div class="particle" style="width: 7.37117px; height: 7.37117px; left: 83.9363%; animation-duration: 7.30675s; animation-delay: 1.99873s;"></div><div class="particle" style="width: 7.52173px; height: 7.52173px; left: 51.4992%; animation-duration: 11.3223s; animation-delay: 3.31497s;"></div><div class="particle" style="width: 7.19281px; height: 7.19281px; left: 41.3259%; animation-duration: 14.9962s; animation-delay: 4.67163s;"></div><div class="particle" style="width: 4.49627px; height: 4.49627px; left: 2.74746%; animation-duration: 13.0101s; animation-delay: 2.29599s;"></div><div class="particle" style="width: 6.23026px; height: 6.23026px; left: 32.8277%; animation-duration: 9.72514s; animation-delay: 1.95173s;"></div><div class="particle" style="width: 3.58008px; height: 3.58008px; left: 92.5221%; animation-duration: 7.94318s; animation-delay: 1.25788s;"></div><div class="particle" style="width: 2.74077px; height: 2.74077px; left: 19.5239%; animation-duration: 5.78193s; animation-delay: 0.698236s;"></div><div class="particle" style="width: 7.92608px; height: 7.92608px; left: 31.4928%; animation-duration: 9.21904s; animation-delay: 1.83159s;"></div><div class="particle" style="width: 7.98436px; height: 7.98436px; left: 38.8119%; animation-duration: 5.12549s; animation-delay: 0.368275s;"></div><div class="particle" style="width: 6.7181px; height: 6.7181px; left: 81.0898%; animation-duration: 12.1912s; animation-delay: 2.37936s;"></div><div class="particle" style="width: 4.48357px; height: 4.48357px; left: 44.7408%; animation-duration: 5.08942s; animation-delay: 2.87244s;"></div><div class="particle" style="width: 4.77495px; height: 4.77495px; left: 61.1772%; animation-duration: 7.95035s; animation-delay: 4.79321s;"></div><div class="particle" style="width: 7.07145px; height: 7.07145px; left: 17.8167%; animation-duration: 13.7684s; animation-delay: 3.18877s;"></div><div class="particle" style="width: 4.14131px; height: 4.14131px; left: 61.5079%; animation-duration: 14.7755s; animation-delay: 1.6376s;"></div><div class="particle" style="width: 7.01198px; height: 7.01198px; left: 98.2813%; animation-duration: 6.53406s; animation-delay: 3.16772s;"></div><div class="particle" style="width: 3.31614px; height: 3.31614px; left: 10.5562%; animation-duration: 5.01455s; animation-delay: 3.39792s;"></div><div class="particle" style="width: 6.86188px; height: 6.86188px; left: 21.5758%; animation-duration: 7.5658s; animation-delay: 3.27209s;"></div><div class="particle" style="width: 4.31577px; height: 4.31577px; left: 10.1927%; animation-duration: 5.0997s; animation-delay: 1.85815s;"></div><div class="particle" style="width: 7.8677px; height: 7.8677px; left: 5.28553%; animation-duration: 7.23861s; animation-delay: 2.93169s;"></div><div class="particle" style="width: 5.32081px; height: 5.32081px; left: 20.3987%; animation-duration: 7.67306s; animation-delay: 0.197245s;"></div><div class="particle" style="width: 5.99857px; height: 5.99857px; left: 35.9639%; animation-duration: 6.03149s; animation-delay: 1.72046s;"></div><div class="particle" style="width: 3.70751px; height: 3.70751px; left: 71.8786%; animation-duration: 13.4365s; animation-delay: 3.5388s;"></div><div class="particle" style="width: 2.56654px; height: 2.56654px; left: 91.5306%; animation-duration: 9.71286s; animation-delay: 4.46451s;"></div><div class="particle" style="width: 6.83807px; height: 6.83807px; left: 93.3628%; animation-duration: 9.72827s; animation-delay: 2.2721s;"></div><div class="particle" style="width: 7.65617px; height: 7.65617px; left: 25.9918%; animation-duration: 14.9301s; animation-delay: 1.39302s;"></div><div class="particle" style="width: 7.25164px; height: 7.25164px; left: 15.1179%; animation-duration: 10.3997s; animation-delay: 1.73921s;"></div><div class="particle" style="width: 4.3344px; height: 4.3344px; left: 84.988%; animation-duration: 8.28617s; animation-delay: 0.180291s;"></div><div class="particle" style="width: 5.22442px; height: 5.22442px; left: 5.12413%; animation-duration: 7.17782s; animation-delay: 0.72118s;"></div><div class="particle" style="width: 3.4023px; height: 3.4023px; left: 63.731%; animation-duration: 14.3669s; animation-delay: 1.17148s;"></div></div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-hero-gradient z-[6]"></div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center text-center px-content-padding-h-mobile md:px-content-padding-h max-w-[1440px] mt-20">
+<h1 class="font-hero-h1-mobile md:font-hero-h1 text-text-primary max-w-[680px] animate-on-scroll visible">
+        One tiny fish. Five levels of things that want to stop her.
+      </h1>
+<p class="font-body-lg text-text-muted max-w-[600px] mt-6 animate-on-scroll delay-100 visible">
+        A fast-paced underwater shoot 'em up — coming to Steam, iOS &amp; Android.
+      </p>
+<div class="flex flex-col md:flex-row gap-4 mt-12 w-full md:w-auto animate-on-scroll delay-200 visible">
+<a class="flex items-center justify-center bg-primary-container text-text-primary font-bold text-[16px] rounded-full w-full md:w-[260px] h-[54px] hover:scale-105 hover:brightness-110 transition-all duration-200 px-6" href="https://store.steampowered.com/app/XXXXX/Flicker/" rel="noopener noreferrer" target="_blank">
+<img alt="" class="w-6 h-6 mr-2 object-contain rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMJUhyV0LHMkT7X-Ddto5D2ZaJwT3ZW3GkutmCyou3-v11MOLp_LTDOcIZkolG-EX8-27PVGtT2O6-fwSVXbqPdJl6B4To5GsNc3zWiOS-_aHPqGW0oBGL9bD37efcXsORKF35K73ZrO7AyFQCnYVPbry9HKZyppLbzz_X_-GBd7b7EqA0dNSKhcAFB6GlWY8fUiwg81yjVOV-1zCwaVvcMhUjlM6Qb0I8Mg61MS5yLcDEtg-bQkw90dPpEJr3KQzTHQyA6Kt6nVQL"/>
+          ♥ Wishlist on Steam
+        </a>
+<button class="flex items-center justify-center bg-bg-mid border-2 border-text-primary text-text-primary font-bold text-[16px] rounded-full w-full md:w-[210px] h-[54px] hover:border-secondary hover:scale-105 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary" data-status="pending-trailer" id="trailer-btn">
+          ▶ Watch the Trailer
+        </button>
+</div><div class="mt-12 flex justify-center animate-on-scroll delay-300 visible">
+<div class="relative"><div class="absolute inset-0 bg-primary/20 blur-[50px] rounded-full scale-150 blur-\[200px\]"></div><img alt="Flicker the Snailfish" class="relative z-10 h-auto object-contain drop-shadow-[0_0_20px_rgba(255,177,200,0.6)] pulse-lure w-\[512px\] md:w-\[512px\]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi1QLlkpVUg2bIumW6fkgNEHdWoJzytwi5A1C6zCNt3oH5liJvut9uUWpAVrBGODyanpT_mwer7TKEsAHXUGJpvvQscHZxttDP9K9QEBfGqVTGVtGUc-TTUR68fks0jhsyZfE4TY2_fPOPi4UE42jdeNDoG-v5a1zgpacPj9bu8QDUAMt75x7SzSo-y3bI7sDnqncyKnUcXASuPrqPT5Gfvqxolm8FtCAzpt7OShjU8HF8DiSygib7ygfq1EwPFqCTvhjC7bfHl8aM"/></div>
+</div>
+</div>
+<!-- Scroll Hint -->
+<div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 animate-on-scroll delay-300 visible">
+</div><div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-text-muted font-body-sm hidden md:block pulse-lure z-10">
+      ↓ scroll
+    </div>
+</section>
+<!-- Section 3: About the Game -->
+<section class="w-full bg-bg-light py-section-padding-v-mobile md:py-section-padding-v" id="about">
+<div class="max-w-[1440px] mx-auto px-content-padding-h-mobile md:px-content-padding-h flex flex-col md:flex-row gap-gap-cards items-center">
+<!-- Left: Gameplay Visual -->
+<div class="w-full md:w-1/2 h-[240px] md:h-[460px] bg-bg-mid rounded-xl overflow-hidden shadow-md border border-border-teal animate-on-scroll p-4 visible"><img alt="Flicker App Icon" class="w-full h-full object-contain rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Vu2qyRw4pRTCsFkROPiLag_zuGbSL_z21hT3y2YYtduhlIDYWvvO69ndj7_SwbVj-KN6NrTrz6luYb_I5jUVs2EuCAjM5i3PC3e7OiKZjjcwyMAEFh-NwoKFKnwMuA2OTX0-Upj817noFj47hxm3aEocr_SK1gMQDLGikmO_ztrHRTKb8HLLVzVuZ_41wFRXPv6F1DYwNWDgzCDqzP07DyYT4QZyD4ywsco9GbxGoWoieDvhA0a78uDuVo41kEuLQxPXs7I3yW3t"/></div>
+<!-- Right: Content -->
+<div class="w-full md:w-1/2 flex flex-col items-start animate-on-scroll delay-100 visible">
+<span class="font-label-badge text-secondary border border-secondary bg-border-teal rounded-[6px] px-4 py-2 mb-4 uppercase tracking-[2px]">
+          ABOUT THE GAME
+        </span>
+<h2 class="font-section-h2-mobile md:font-section-h2 text-text-dark mb-6">
+          The deep ocean is beautiful. It also wants you dead.
+        </h2>
+<p class="font-body-sm text-[#0d0d0d] mb-4">
+          Flicker is a vertical shoot 'em up where you pilot an adorable snailfish through 5 levels of increasingly dangerous deep-sea territory. Dodge bullet storms, discover power-ups, and face off against some of the ocean's most terrifying real-world creatures — the ones nature already made into nightmares.
+        </p>
+<p class="font-body-sm text-[#0d0d0d] mb-8">
+          Beautiful hand-crafted bioluminescent pixel art, original music for every level, and bosses that are genuinely unsettling. Available on Steam, iOS, and Android.
+        </p>
+<a class="font-body-sm font-semibold text-primary-container hover:underline decoration-2 underline-offset-4 transition-all" href="#gallery">
+          See it in action ↓
+        </a>
+</div>
+</div>
+</section>
+<!-- Section 4: Features -->
+<section class="w-full bg-bg-mid py-section-padding-v-mobile md:py-section-padding-v" id="features">
+<div class="max-w-[1440px] mx-auto px-content-padding-h-mobile md:px-content-padding-h flex flex-col items-center">
+<!-- Header -->
+<div class="flex flex-col items-center text-center mb-12 animate-on-scroll visible">
+<span class="font-label-badge text-secondary border border-secondary bg-border-teal rounded-[6px] px-4 py-2 mb-4 uppercase tracking-[2px]">
+          WHY FLICKER?
+        </span>
+<h2 class="font-section-h2-mobile md:font-section-h2 text-text-primary">
+          Three reasons to dive in.
+        </h2>
+</div>
+<!-- Cards Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gap-cards w-full">
+<!-- Card 1 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-6 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-100 visible">
+<div aria-hidden="true" class="text-3xl mb-4 text-text-primary">⚡</div>
+<h3 class="font-card-heading text-secondary mb-2">Fast &amp; Frantic</h3>
+<p class="font-body-sm text-text-muted">
+            5 levels of escalating bullet patterns, power-ups, and enemies designed to test your reflexes — not your patience.
+          </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-6 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-200 visible">
+<div aria-hidden="true" class="text-3xl mb-4 text-text-primary">🦀</div>
+<h3 class="font-card-heading text-secondary mb-2">Real Monsters</h3>
+<p class="font-body-sm text-text-muted">
+            Every boss is a real deep-sea creature. The Yeti Crab. The Pelican Eel. The Squid. The Blackseadevil. Nature did the hard work.
+          </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-6 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-300 visible">
+<div aria-hidden="true" class="text-3xl mb-4 text-text-primary">🎵</div>
+<h3 class="font-card-heading text-secondary mb-2">Original Soundtrack</h3>
+<p class="font-body-sm text-text-muted">
+            A full original score composed for every level and boss encounter. Sounds great with the volume up.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Gallery -->
+<section class="w-full bg-bg-light py-section-padding-v-mobile md:py-section-padding-v overflow-hidden" id="gallery">
+<div class="max-w-[1440px] mx-auto px-content-padding-h-mobile md:px-content-padding-h">
+<!-- Header -->
+<div class="flex flex-col items-center text-center mb-10 animate-on-scroll visible">
+<span class="font-label-badge text-secondary border border-secondary bg-border-teal rounded-[6px] px-4 py-2 mb-4 uppercase tracking-[2px]">
+          MEDIA
+        </span>
+<h2 class="font-section-h2-mobile md:font-section-h2 text-text-dark">
+          See it in action
+        </h2>
+</div>
+<!-- Tiles Container -->
+<div class="flex md:grid md:grid-cols-5 gap-gap-tiles overflow-x-auto hide-scrollbar snap-x snap-mandatory animate-on-scroll delay-100 pb-4 visible">
+<!-- Tile 1 -->
+<div class="min-w-[200px] md:min-w-0 h-[340px] bg-bg-mid border border-border-teal rounded-[10px] overflow-hidden relative group cursor-pointer snap-start transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_16px_rgba(0,200,180,0.25)]">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center" data-alt="A pixel art GIF frame showing the snailfish character dodging glowing teal bullets in a dark environment.">
+<span class="text-text-muted text-xs">GIF 1</span>
+</div>
+<div class="absolute bottom-0 w-full h-[36px] bg-bg-mid/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="font-body-sm text-xs text-secondary">Gameplay — Level 1</span>
+</div>
+</div>
+<!-- Tile 2 -->
+<div class="min-w-[200px] md:min-w-0 h-[340px] bg-bg-mid border border-border-teal rounded-[10px] overflow-hidden relative group cursor-pointer snap-start transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_16px_rgba(0,200,180,0.25)]">
+<div class="w-full h-full bg-surface-container-high flex items-center justify-center" data-alt="A close up pixel art animation of the cute pink snailfish character swimming with a smooth, undulating motion."><img alt="The Yeti Crab habitat" class="w-full h-full object-cover rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBybl8icPuwDQgxV_8wgjsOSMvcyfQkZHRUJx0j7bzNcszDuOsXjTEjG7tAmvZ3_3FYYyZgjcyOBjr4CRBEKiO-rkqhDWBIZvaGYPbaLjdQmNwgfGWjswEJchFD6CsdhOXEp9tf2B2kZ2uOn1kaq0FxOu3WE8satPUMVhPra4uam4KcdbKuArVST2zpw9Nq48q_mHbHsLbK523FPpJVenFBbblNAv3cQFABYcs4HbS4qE7iiyLSBKxphYHcdEASu3jh89u3CF_zHIb_"/></div>
+<div class="absolute bottom-0 w-full h-[36px] bg-bg-mid/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="font-body-sm text-xs text-secondary">Yeti Crab — Idle Animation</span>
+</div>
+</div>
+<!-- Tile 3 -->
+<div class="min-w-[200px] md:min-w-0 h-[340px] bg-bg-mid border border-border-teal rounded-[10px] overflow-hidden relative group cursor-pointer snap-start transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_16px_rgba(0,200,180,0.25)]">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center" data-alt="Pixel art animation of a pale, hairy Yeti Crab boss character moving menacingly in the dark ocean."><img alt="The Pelican Eel encounter" class="w-full h-full object-cover rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJk1ShTu-mca6U1yR_oV6VHPCleW6OdXw6dnOdehpaoZJQdV2s7vM0dxEarNo1FpgpZVnTI-S3VTk12UO2redDBrIoPKmAZkaON2XEjlV6neu429T1MsFBu5EwGmiWNoVZJmekw35DWDu0Y9vP-m-9GBf7toOch-3Q4vEJWBpKJRVnQR81To_pi6JjpngD7nuEo473S49eXfFeiVExH1CNaSlkOcarU65Kix0GBui--t6AGtw9bETlBHpVjk5g3yr0yxOwDVeFgf6"/></div>
+<div class="absolute bottom-0 w-full h-[36px] bg-bg-mid/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="font-body-sm text-xs text-secondary">Gameplay — Into the Deep</span>
+</div>
+</div>
+<!-- Tile 4 -->
+<div class="min-w-[200px] md:min-w-0 h-[340px] bg-bg-mid border border-border-teal rounded-[10px] overflow-hidden relative group cursor-pointer snap-start transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_16px_rgba(0,200,180,0.25)]">
+<img alt="The Abyss" class="w-full h-full object-cover rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4uzog9dGBmEFeNl2xNsPwZWHxUrJ7fqzxseIcBfJkiDGgRRfV-goE_HfvHZSG_zhLCkHpDusnb7gEtscWF79ccFY4pM5jUsHg12_XWpWTfCFtSlu5NwiTIo5Lvk9EeWoW5HM1No2pvjiMvOKMN-oTrDvho25Lu7a1tBzs9f5Y_aIWxwJA0vclkwG_w6nDdgxswjciQZJ8fmw26oktNYyHvJHhOz4vssW4neRnIE0QBdilTmuRRWbi9NxgkMVTWSHhg8XbAwv-gy8"/>
+<div class="absolute bottom-0 w-full h-[36px] bg-bg-mid/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="font-body-sm text-xs text-secondary">The Abyss — Boss 4</span>
+</div>
+</div>
+<!-- Tile 5 -->
+<div class="min-w-[200px] md:min-w-0 h-[340px] bg-bg-mid border border-border-teal rounded-[10px] overflow-hidden relative group cursor-pointer snap-start transition-all duration-200 hover:scale-[1.02] hover:shadow-[0_0_16px_rgba(0,200,180,0.25)]">
+<div class="w-full h-full bg-surface-container-highest flex items-center justify-center" data-alt="A static pixel art scene showing a deep underwater environment with glowing vents and floating debris.">
+<span class="text-text-muted text-xs">Img 5</span>
+</div>
+<div class="absolute bottom-0 w-full h-[36px] bg-bg-mid/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="font-body-sm text-xs text-secondary">Deep Ocean — Environment</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Meet the Bosses -->
+<section class="w-full bg-bg-deep py-section-padding-v-mobile md:py-section-padding-v" id="bosses">
+<div class="max-w-[1440px] mx-auto px-content-padding-h-mobile md:px-content-padding-h flex flex-col items-center">
+<!-- Header -->
+<div class="flex flex-col items-center text-center mb-12 animate-on-scroll visible">
+<span class="font-label-badge text-secondary border border-secondary bg-border-teal rounded-[6px] px-4 py-2 mb-4 uppercase tracking-[2px]">
+          MEET THE BOSSES
+        </span>
+<h2 class="font-section-h2-mobile md:font-section-h2 text-text-primary mb-2">
+          Meet the Bosses
+        </h2>
+<p class="font-body-lg text-text-muted">
+          They're real. They're enormous. They live at the bottom of the ocean.
+        </p>
+</div>
+<!-- Boss Cards Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gap-cards w-full max-w-[340px] md:max-w-none">
+<!-- Boss 1 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-5 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-100 visible">
+<div class="w-full h-[240px] bg-bg-mid rounded-[10px] mb-4 flex items-center justify-center overflow-hidden"><img alt="The Yeti Crab" class="w-full h-full object-contain p-4 rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhPugUWeKyniRUoZjUepy7uRKqCVFrqfOP_ioDch-mHgFiPcnfH9kSkCz8BpTieU7D-MbIYJlhUqwGMKVIPWlK-KxXqa2oPWAzMKU_3NkYIdULecDUkJJo9a0wNjTYhN8dhWQYAbGvRXIidON9NU3fHcGtaM3xmBn_Z-0NGdlGXc28AIDhKIujzGjGFSnfnqBRJOBdynr95MACbLhlbC4lazjAnBfqW3Zk31lCHcT_jQUYb3y94O_TRLvSnpgSAfCbefqa55FMGKBy"/></div>
+<h3 class="font-card-heading text-[16px] text-secondary">The Yeti Crab</h3>
+<p class="font-scientific-name text-tertiary-container italic mb-2">Kiwa hirsuta</p>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+            Blind. Covered in hair-like filaments. Lives near hydrothermal vents. Flicker's first major problem.
+          </p>
+</div>
+<!-- Boss 2 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-5 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-200 visible">
+<div class="w-full h-[240px] bg-bg-mid rounded-[10px] mb-4 flex items-center justify-center overflow-hidden"><img alt="The Pelican Eel" class="w-full h-full object-cover object-center rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeI3MRL6r5Re2bpevS0dOMbeYjIlgGWMxXyjNgWRwE09wtlJ6m7DTgxCyNckWC7cck0h-r1APx4D7vP313Sd8X0NhevcPTAoxywkcqzbVtX2F2mBwx_jXLgnprSjkA5EbcEImr2TN7vHjHKYjixKbPKE1INFWRRelayM2HNhQ6deKV8oPdVtWJNsPsl1-n2rJ3V3s8YxJ2qqokcQcdCWQBdWR3qRqBSv47b6c4o56a_p4hljzy7mmGPFbDU8cvMMS8oxC6JbFxKIZ-"/></div>
+<h3 class="font-card-heading text-[16px] text-secondary">The Pelican Eel</h3>
+<p class="font-scientific-name text-tertiary-container italic mb-2">Eurypharynx pelecanoides</p>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+            Its jaw unhinges to swallow prey larger than itself. It finds this completely normal.
+          </p>
+</div>
+<!-- Boss 3 -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-5 hover:border-secondary transition-colors duration-200 animate-on-scroll delay-300 visible">
+<div class="w-full h-[240px] bg-bg-mid rounded-[10px] mb-4 flex items-center justify-center overflow-hidden">
+<img alt="Pixel art sprite of a massive, menacing purple squid boss character, with thick tentacles reaching outward." class="w-full h-full object-contain rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoveZMD1yqV8zLBYKW0dFqXBaExUQCJKzUm16RWIIEKXQpk4kPJbjvYcBybEWYooH9FE4sZe3OeiNMHjGm9w4nEltvp-0_x3cEudcQ0sQd7NxNkc1UOuCDsEzmkzlnUaxZmITUn49oxf2KNvjgH9N_lh5_Gb1DIkenu1QWlbxYacMUYKjuXpG6jW0zQFCrHE7HBEi3F13qwkyZVdDM4yZ3abXNhzYFHPezMgoZomgQdIYXtbvo0xfvOaEKWAknHj3ODmobaVGizGSh"/>
+</div>
+<h3 class="font-card-heading text-[16px] text-secondary">The Squid</h3>
+<p class="font-scientific-name text-tertiary-container italic mb-2">Species TBD</p>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+            Fast. Multi-armed. Not interested in negotiating.
+          </p>
+</div>
+<!-- Boss 4 (Mystery) -->
+<div class="bg-bg-card border border-border-teal rounded-2xl p-5 hover:border-[rgba(0,200,180,0.4)] transition-colors duration-200 animate-on-scroll delay-400 relative visible">
+<div class="w-full h-[240px] bg-bg-mid rounded-[10px] mb-4 relative flex items-center justify-center overflow-hidden group">
+<!-- Hidden Image -->
+<div class="w-full h-full bg-surface-container-highest" data-alt="A completely black square, hiding the final boss image, representing the deepest, darkest part of the ocean abyss."><img alt="Mystery Boss" class="w-full h-full object-cover opacity-20 rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8yPA2dNBf_tf0fkyY8XMzQtDYqQhgs9Dzr2-RqgZ1QejBtYb2ug5GCo0UzM58WlFFboLZ8g6YTPhhaCI6bLCatjYUE22mrJ1ngDtzrMI8sDBJqz6nSWrtdJsXf5ZsgBcje2SIJJmp8DzC_Q6DbW-U8fOzEws2IkYTp18MQMduUzA5SXVvZAsiD2aNl5XvWrAoczAbDNnQXi66OoCnySjJQLAb3pj0gDns1YHKCuUnCPhbKasN4rKfqY7QcXkfluDr0wBDTVGPm3w5"/></div>
+<!-- Vignette Overlay -->
+<div class="absolute inset-0" style="background: radial-gradient(ellipse at center, rgba(5, 8, 23, 0) 20%, rgba(5, 8, 23, 0.92) 100%);"></div>
+<!-- Lure Dot -->
+<div class="absolute w-2 h-2 rounded-full bg-secondary pulse-lure" style="top: 45%; left: 55%;"></div>
+<!-- Lock Icon -->
+<span class="material-symbols-outlined text-text-muted text-[24px] absolute z-10">lock</span>
+</div>
+<h3 class="font-card-heading text-[16px] text-text-muted tracking-widest">???</h3>
+<!-- Species hidden -->
+<div class="h-[13px] mb-2"></div>
+<p class="font-body-sm text-[12px] text-text-muted leading-relaxed">
+            What lives at the very bottom of the ocean? You'll find out.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Footer -->
+<footer class="w-full bg-bg-deep border-t border-[rgba(255,255,255,0.08)] py-section-padding-v-mobile md:py-section-padding-v">
+<div class="max-w-[1440px] mx-auto px-content-padding-h-mobile md:px-content-padding-h flex flex-col">
+<!-- Top Row: Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-gap-cards mb-10">
+<!-- Col 1: Studio -->
+<div class="flex flex-col items-start md:max-w-[300px]">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Butterware Studios Logo" class="w-10 h-10 bg-white rounded-full p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzwJ8RJOrQp84kwpolU8gk4DlzfU7jwVxI8Sc2ErHbpHXcwpIbK8ktCH0G9VspAqW9woV8YFpFA6NckaGa5UTaNrwLZ5RDgZEoNizTXb0pXmCihtXO2zsx-IivPvbR0covkV5hs66v2yCq0HEMkSYoHF2Dm0x9mcNLLhNhmzQCXe_JYYxFJbWmJNG8T5uX8UDmK3O0b9aCW0xjdZBrrb7rK-qLXmo_w66mnCmEoQEQvH0HkjWDtQ0iRFYbSJR6Q--1HDV2P_K39Umn"/>
+<img alt="FLICKER" class="h-8 rendering-pixelated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARDZe4daVjsgCwAZyRh0iiDpURfTDAeZN5Au-MWeAthQ4BSpzTo_gGpRPXMA1r3abGVNYe1e1R-VKsfte19Lo1g-dBm-cdAP48MBoRTtbUaLMkFlxgUzFEXISJDbhgH32VCutloGT665m3pv9-Uo5m569gwrx9hnno4D2yyUQXu95bXwbZCe6vwh6kQFvc5GolDcln-t7X-Pn3TQrgkc41bZ4_wVb1mbU43Qte-uMZA6apb1CP71YNzOig1MD2OHojPV7TTMQzkf22"/>
+</div>
+<p class="font-body-sm text-text-muted leading-[1.8]">
+            A game by Butterware Studios<br/>
+            Toronto, Canada
+          </p>
+</div>
+<!-- Col 2: Social -->
+<!-- Col 3: Links -->
+<div class="flex flex-col items-start md:items-end">
+<div class="flex flex-col items-start">
+<h4 class="font-body-sm font-bold text-text-primary mb-4">Get the Game</h4>
+<a class="font-body-sm text-secondary mb-2 hover:underline hover:opacity-80 transition-all" href="https://store.steampowered.com/app/XXXXX/Flicker/" rel="noopener noreferrer" target="_blank">→ Steam — Wishlist</a>
+<a class="font-body-sm text-secondary mb-2 hover:underline hover:opacity-80 transition-all" href="#" rel="noopener noreferrer" target="_blank">→ App Store</a>
+<a class="font-body-sm text-secondary mb-2 hover:underline hover:opacity-80 transition-all" href="#" rel="noopener noreferrer" target="_blank">→ Google Play</a>
+</div>
+</div>
+</div>
+<!-- Bottom Rule -->
+<div class="w-full border-t border-[rgba(255,255,255,0.08)] pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<p class="font-body-sm text-[12px] text-text-muted">
+          © 2026 Butterware Studios. All rights reserved.
+        </p>
+<a class="font-body-sm text-[12px] text-secondary hover:underline transition-all" href="/privacy-policy">
+          Privacy Policy
+        </a>
+</div>
+</div>
+</footer>
+<!-- Scripts for interactivity -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Particle System for Hero
+      const particleContainer = document.getElementById('particle-container');
+      
+      function createParticle() {
+        if (!particleContainer) return;
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random size between 2px and 8px
+        const size = Math.random() * 6 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random horizontal position
+        particle.style.left = `${Math.random() * 100}%`;
+        
+        // Random animation duration between 5s and 15s
+        const duration = Math.random() * 10 + 5;
+        particle.style.animationDuration = `${duration}s`;
+        
+        // Random delay
+        particle.style.animationDelay = `${Math.random() * 5}s`;
+        
+        particleContainer.appendChild(particle);
+        
+        // Remove particle after animation ends to prevent DOM bloat
+        setTimeout(() => {
+          particle.remove();
+        }, (duration + 5) * 1000);
+      }
+
+      // Check if user prefers reduced motion before adding particles
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReducedMotion && particleContainer) {
+        // Create initial batch of particles
+        for (let i = 0; i < 40; i++) {
+          createParticle();
+        }
+        // Continuously create new particles
+        setInterval(createParticle, 250);
+      }
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.nav-link-mobile');
+      
+      function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+        const isExpanded = !mobileMenu.classList.contains('hidden');
+        menuBtn.setAttribute('aria-expanded', isExpanded);
+      }
+      
+      menuBtn.addEventListener('click', toggleMenu);
+      
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Nav Scroll Style
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) {
+          navbar.classList.add('border-b', 'border-border-teal/20');
+        } else {
+          navbar.classList.remove('border-b', 'border-border-teal/20');
+        }
+      });
+
+      // Trailer Button Pending State
+      const trailerBtn = document.getElementById('trailer-btn');
+      trailerBtn.addEventListener('click', (e) => {
+        if(trailerBtn.dataset.status === 'pending-trailer') {
+          e.preventDefault();
+          alert('Trailer coming soon!');
+        }
+      });
+
+      // Scroll Animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        scrollObserver.observe(el);
+      });
+
+      // Active Nav Highlight
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      const navObserverOptions = {
+        root: null,
+        rootMargin: '-50% 0px -50% 0px', // Trigger when section hits middle of screen
+        threshold: 0
+      };
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              if (link.dataset.section === id) {
+                link.classList.remove('text-text-muted');
+                link.classList.add('text-secondary');
+              } else {
+                link.classList.add('text-text-muted');
+                link.classList.remove('text-secondary');
+              }
+            });
+          }
+        });
+      }, navObserverOptions);
+
+      sections.forEach(section => {
+        navObserver.observe(section);
+      });
+
+    });
+  </script>
+</body></html>
