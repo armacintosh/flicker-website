@@ -391,12 +391,11 @@
 ═══════════════════════════════════ -->
 <section id="hero" style="position:relative;width:100%;min-height:100svh;max-height:900px;display:flex;align-items:center;justify-content:center;background:#050817;overflow:hidden;">
 
-  <!-- Background: promo art -->
+  <!-- Background: Video loop -->
   <div style="position:absolute;inset:0;">
-    <img src="assets/Flicker_Promo_Art.png"
-      alt="A massive deep-sea boss with enormous glowing bioluminescent eyes staring out of the pitch-black abyss"
-      class="anim-breathe px-art"
-      style="width:100%;height:100%;object-fit:cover;object-position:center;">
+    <video autoplay muted loop playsinline class="anim-breathe px-art" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+      <source src="assets/videos/flicker_game_title_screen.mp4" type="video/mp4">
+    </video>
   </div>
 
   <!-- Floating particles -->
@@ -446,9 +445,12 @@
 <section id="about" style="background:var(--bg-light);padding:60px 0 80px;">
   <div class="px-site" style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;gap:40px;align-items:center;" id="about-inner">
 
-    <!-- Left: GIF panel -->
+    <!-- Left: Video panel -->
     <div class="fade-up about-gif" style="flex:1;min-width:280px;max-width:560px;height:460px;background:var(--bg-mid);border-radius:12px;overflow:hidden;border:1px solid var(--border-teal);">
-      <img src="assets/Begin.gif" alt="Flicker gameplay: the pink snailfish dodging cascading bioluminescent bullet patterns in Level 1" class="px-art" style="width:100%;height:100%;object-fit:contain;">
+      <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:contain;">
+        <source src="assets/videos/navigating_twilight_zone_dangers.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
     <!-- Right: copy -->
@@ -524,37 +526,47 @@
       style="display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;">
 
       <div class="g-tile" style="scroll-snap-align:start;"
-        data-src="assets/Begin.gif" data-caption="Gameplay — Level 1"
+        data-src="assets/videos/discovering_the_twilight_zone.mp4" data-caption="Gameplay — Level 1" data-type="video"
         role="button" tabindex="0" aria-label="View gallery: Gameplay Level 1">
-        <img src="assets/Begin.gif" alt="Gameplay footage showing the snailfish dodging bioluminescent bullets in Level 1" class="px-art" loading="lazy">
+        <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:cover;">
+          <source src="assets/videos/discovering_the_twilight_zone.mp4" type="video/mp4">
+        </video>
         <div class="cap">Gameplay — Level 1</div>
       </div>
 
       <div class="g-tile" style="scroll-snap-align:start;"
-        data-src="assets/Heroe.gif" data-caption="Flicker — Character Sprite"
+        data-src="assets/videos/crab_creature_illustration_and_cute_fish.mp4" data-caption="Flicker — Character Sprite" data-type="video"
         role="button" tabindex="0" aria-label="View gallery: Flicker Character Sprite">
-        <img src="assets/Heroe.gif" alt="Animated pixel art sprite of Flicker the snailfish" class="px-art" loading="lazy">
+        <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:cover;">
+          <source src="assets/videos/crab_creature_illustration_and_cute_fish.mp4" type="video/mp4">
+        </video>
         <div class="cap">Flicker — Character Sprite</div>
       </div>
 
       <div class="g-tile" style="scroll-snap-align:start;"
-        data-src="assets/B1idle_D1.gif" data-caption="The Yeti Crab — Boss 1"
+        data-src="assets/videos/the_abyssal_crab_boss_battle.mp4" data-caption="The Yeti Crab — Boss 1" data-type="video"
         role="button" tabindex="0" aria-label="View gallery: The Yeti Crab Boss 1">
-        <img src="assets/B1idle_D1.gif" alt="Animated pixel art of the Yeti Crab boss idle animation" class="px-art" loading="lazy">
+        <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:cover;">
+          <source src="assets/videos/the_abyssal_crab_boss_battle.mp4" type="video/mp4">
+        </video>
         <div class="cap">The Yeti Crab — Boss 1</div>
       </div>
 
       <div class="g-tile" style="scroll-snap-align:start;"
-        data-src="assets/Ani_b5.gif" data-caption="The Abyss — Boss 4"
+        data-src="assets/videos/confronting_the_twilight_octopus.mp4" data-caption="The Abyss — Boss 4" data-type="video"
         role="button" tabindex="0" aria-label="View gallery: The Abyss Boss 4">
-        <img src="assets/Ani_b5.gif" alt="Animated pixel art of the final boss lurking in the abyss" class="px-art" loading="lazy">
+        <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:cover;">
+          <source src="assets/videos/confronting_the_twilight_octopus.mp4" type="video/mp4">
+        </video>
         <div class="cap">The Abyss — Boss 4</div>
       </div>
 
       <div class="g-tile" style="scroll-snap-align:start;"
-        data-src="assets/Scene_Final_Frame1.png" data-caption="Deep Ocean — Environment"
+        data-src="assets/videos/entering_the_midnight_zone.mp4" data-caption="Deep Ocean — Environment" data-type="video"
         role="button" tabindex="0" aria-label="View gallery: Deep Ocean Environment">
-        <img src="assets/Scene_Final_Frame1.png" alt="Pixel art scene of the deep ocean environment with atmospheric lighting" class="px-art" loading="lazy">
+        <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:cover;">
+          <source src="assets/videos/entering_the_midnight_zone.mp4" type="video/mp4">
+        </video>
         <div class="cap">Deep Ocean — Environment</div>
       </div>
 
@@ -592,7 +604,9 @@
       <!-- Boss 1: Yeti Crab -->
       <div class="boss-card fade-up d1">
         <div class="sprite-well">
-          <img src="assets/B1idle_D1.gif" alt="Animated pixel art of The Yeti Crab boss — a blind crustacean covered in hair-like filaments" class="px-art" loading="lazy">
+          <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:contain;padding:12px;">
+            <source src="assets/videos/the_abyssal_crab_boss_battle.mp4" type="video/mp4">
+          </video>
         </div>
         <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin:0 0 4px;">The Yeti Crab</h3>
         <p style="font-size:11px;font-weight:300;color:var(--purple);font-style:italic;margin:0 0 10px;"><em>Kiwa hirsuta</em></p>
@@ -600,10 +614,11 @@
       </div>
 
       <!-- Boss 2: Pelican Eel -->
-      <!-- NOTE: Boss2PelicanEel.png not found in assets — using B2-A1.gif animation as placeholder -->
       <div class="boss-card fade-up d2">
         <div class="sprite-well">
-          <img src="assets/Boss_PelicanEel.gif" alt="Animated pixel art sprite of The Pelican Eel boss with its enormous unhinged jaw" class="px-art" loading="lazy">
+          <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:contain;padding:12px;">
+            <source src="assets/videos/the_midnight_eel_boss_battle.mp4" type="video/mp4">
+          </video>
         </div>
         <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin:0 0 4px;">The Pelican Eel</h3>
         <p style="font-size:11px;font-weight:300;color:var(--purple);font-style:italic;margin:0 0 10px;"><em>Eurypharynx pelecanoides</em></p>
@@ -611,10 +626,11 @@
       </div>
 
       <!-- Boss 3: The Squid -->
-      <!-- NOTE: Boss3Squid_A.png not found — using Boss3Squid_B.png -->
       <div class="boss-card fade-up d3">
         <div class="sprite-well">
-          <img src="assets/Boss_SquidGif.gif" alt="Animated pixel art of The Squid boss, a massive multi-armed cephalopod" class="px-art" loading="lazy">
+          <video autoplay muted loop playsinline class="px-art" style="width:100%;height:100%;object-fit:contain;padding:12px;">
+            <source src="assets/videos/eel_and_purple_squid_background_coloring.mp4" type="video/mp4">
+          </video>
         </div>
         <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin:0 0 4px;">The Squid</h3>
         <p style="font-size:11px;font-weight:300;color:var(--purple);font-style:italic;margin:0 0 10px;"><em>Species TBD</em></p>
@@ -624,8 +640,10 @@
       <!-- Boss 4: Mystery (Blackseadevil) -->
       <div class="boss-card mystery fade-up d4">
         <div class="sprite-well" style="position:relative;">
-          <!-- Obscured sprite -->
-          <img src="assets/Ani_b5.gif" alt="A dark ocean abyss — final boss hidden" class="px-art" style="opacity:0.15;width:100%;height:100%;object-fit:contain;padding:12px;position:absolute;inset:0;" loading="lazy">
+          <!-- Obscured teaser video -->
+          <video autoplay muted loop playsinline class="px-art" style="opacity:0.15;width:100%;height:100%;object-fit:contain;padding:12px;position:absolute;inset:0;">
+            <source src="assets/videos/jellyfish_friends_and_the_giant_monster.mp4" type="video/mp4">
+          </video>
           <!-- Radial vignette -->
           <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(5,8,23,0) 18%,rgba(5,8,23,0.94) 100%);z-index:1;"></div>
           <!-- Lure dot -->
@@ -716,10 +734,13 @@
 <!-- ═══════════════════════════════════
      GALLERY LIGHTBOX
 ═══════════════════════════════════ -->
-<div id="gallery-modal" class="modal" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+<div id="gallery-modal" class="modal" role="dialog" aria-modal="true" aria-label="Gallery viewer">
   <div class="modal-box" style="max-width:80vw;display:flex;flex-direction:column;align-items:center;">
-    <button class="modal-close" id="gallery-close" aria-label="Close image viewer">✕</button>
-    <img id="gallery-modal-img" src="" alt="" class="px-art" style="max-width:80vw;max-height:75vh;object-fit:contain;border-radius:8px;">
+    <button class="modal-close" id="gallery-close" aria-label="Close viewer">✕</button>
+    <div id="gallery-modal-content" style="width:100%;display:flex;justify-content:center;">
+      <img id="gallery-modal-img" src="" alt="" class="px-art" style="max-width:80vw;max-height:75vh;object-fit:contain;border-radius:8px;display:none;">
+      <video id="gallery-modal-video" autoplay muted loop playsinline class="px-art" style="max-width:80vw;max-height:75vh;object-fit:contain;border-radius:8px;display:none;"></video>
+    </div>
     <p id="gallery-modal-cap" style="margin-top:14px;font-size:14px;color:var(--teal);text-align:center;"></p>
   </div>
 </div>
@@ -840,7 +861,8 @@
     document.body.style.overflow = '';
     if (m === trailerModal) trailerIframe.src = '';
     if (m === galleryModal) {
-      document.getElementById('gallery-modal-img').src = '';
+      galleryModalImg.src = '';
+      galleryModalVid.src = '';
     }
   }
 
@@ -850,12 +872,25 @@
   // ── Gallery lightbox ──
   const galleryModal    = document.getElementById('gallery-modal');
   const galleryModalImg = document.getElementById('gallery-modal-img');
+  const galleryModalVid = document.getElementById('gallery-modal-video');
   const galleryModalCap = document.getElementById('gallery-modal-cap');
 
   document.querySelectorAll('.g-tile').forEach(tile => {
     const activate = () => {
-      galleryModalImg.src = tile.dataset.src;
-      galleryModalImg.alt = tile.dataset.caption || '';
+      const src = tile.dataset.src;
+      const type = tile.dataset.type || 'image';
+      
+      if (type === 'video') {
+        galleryModalVid.src = src;
+        galleryModalVid.style.display = 'block';
+        galleryModalImg.style.display = 'none';
+      } else {
+        galleryModalImg.src = src;
+        galleryModalImg.alt = tile.dataset.caption || '';
+        galleryModalImg.style.display = 'block';
+        galleryModalVid.style.display = 'none';
+      }
+      
       galleryModalCap.textContent = tile.dataset.caption || '';
       openModal(galleryModal);
     };
